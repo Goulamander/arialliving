@@ -1,0 +1,61 @@
+.modal-dialog {
+    max-width: 700px;
+
+    &.manage-booking {
+        max-width: 600px;
+    }
+}
+
+.modal {
+    .modal-header {
+
+        .modal-close {
+            z-index: 99;
+            right: 16px;
+            top: 16px;
+            i {
+                color: #000;
+            }
+        }
+        h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+    }
+    .modal-body {
+
+        line-height: 1.4;
+
+        h4 {
+            font-size: 18px;
+            margin-top: 0;
+        }
+
+        small {
+            color: #575877;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+
+        &.__delete {
+            .modal-main-icon {
+                font-size: 28px;
+                float: none;
+                text-align: center;
+                display: block;
+                margin: 32px 0;
+                color: var(--icon-color);
+            }
+        }
+    }
+    .modal-form-footer {
+        display: block;
+        clear: both;
+    }
+}
+
+.modal-backdrop.show {
+    opacity: 1;
+}

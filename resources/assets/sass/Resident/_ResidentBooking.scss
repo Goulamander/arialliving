@@ -1,0 +1,311 @@
+
+
+.manage__booking {
+
+    ._close {
+        display: none;
+    }
+
+    small {
+        font-size: 12px;
+        color: var(--font-color-light);
+    }
+
+    .booking-success {
+        display: inline-block;
+        margin-bottom: 40px;
+        i {
+            font-size: 36px;
+            float: left;
+            color: #54d5c1;
+            margin-right: 15px;
+            margin-top: -2px;
+        }
+        h3 {
+            float: left;
+            font-size: 23px;
+            margin: 0;
+        }
+    }
+
+    .head {
+        margin-bottom: 25px;
+
+        img {
+            width: 76px;
+            height: 76px;
+            float: left;
+            margin-right: 15px;
+            border-radius: 100%;
+        }
+        h5 {
+            font-size: 18px;
+            margin: 0;
+            display: inline-block;
+        }
+        h3 {
+            color: #000;
+            margin: 0;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+    }
+
+    .body {
+
+        .calendar {
+            background-color: #f8f8f8;
+            display: block;
+            width: 100%;
+            height: 400px;
+        }
+
+        .booking-detail {
+            
+            ._detail {
+                border-right: 1px solid #ececec;
+                margin-bottom: 15px;
+
+                &:last-child {
+                    border: 0 none;
+                }
+
+                span:not(.label) {
+                    display: block;
+                    position: relative;
+                    font-size: 15px;
+                    line-height: 1.4;
+                    font-weight: bold;
+                }
+
+                i {
+                    font-size: 15px;
+                    padding-left: 4px;
+                    // color: var(--secondary-color);
+                }
+            }
+
+
+            // for events
+            ._date {
+                font-size: 20px;
+                font-weight: bold;
+                display: block;
+                clear: both;
+            }
+
+            ._time,
+            ._location {
+                font-size: 15px;
+                font-weight: 500;
+            }
+
+            .form-control {
+                border: 1px solid transparent !important;
+                height: 32px !important;
+                padding: 0;
+
+                &:hover {
+                    border-color: var(--border-color) !important;
+                }
+            }
+
+
+
+            #bookingDetailsServiceTab,
+            #bookingDetailsTab {
+
+                .btn {
+                    font-size: 12px;
+                }
+
+                h3 {
+                    margin: 0;
+                    font-size: 16px;
+                    color: var(--font-color-light);
+                }
+
+                #bookingCalendar {
+                    display: inline-block;
+                    height: 25px;
+                    margin-top: 0;
+
+                    span {
+                        position: relative;
+                        font-size: 20px;
+                        line-height: 1.4;
+                        font-weight: bold;
+                        float: left;
+                    }
+
+                    i {
+                        margin-left: 5px;
+                        margin-top: 2px;
+                        float: left;
+                    }
+
+                    /** disabled state */
+                    &.disabled {
+                       pointer-events: none;
+                       
+                       i {
+                           display: none;
+                       }
+                    }
+                    
+                }
+
+                .booking_length {
+                    display: block;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+
+            }
+
+            .date-field-group {
+                border: 1px solid #ccc;
+                padding: 5px;
+                
+                label {
+                    
+                }
+            }
+        }
+
+        .booking-card-footer {
+            
+ 
+        }
+    }
+
+    /** Transactions */
+    .transactions {
+        ._transaction {
+            border: 1px solid #efefef;
+            border-radius: 12px;
+            padding: 12px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+
+    .confirm_cancel_btn {
+        background: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        padding: 2px 16px;
+        margin-left: 5px;
+        font-size: 13px;
+    }
+
+}
+
+
+
+/** Calendar tippy cards */
+.tippy-content {
+    ._close {
+        display: block;
+        border: 0 none;
+        background-color: transparent;
+        position: absolute;
+        right: 5px;
+        top: 8px;
+
+        i {
+            font-size: 16px;
+            color: var(--icon-color);
+            border-color: transparent;
+            border: 1px solid transparent;
+            border-radius: 50px;
+            padding: 3px;
+
+            @include transition(.2s);
+
+            &:hover,
+            &:active,
+            &:focus {
+                border-color: #000;
+                color: #000;
+            }
+        }
+    }
+    .manage__booking {
+        padding: 8px;
+        width: 450px;
+
+    }
+}
+
+
+/** booking summary section */
+.booking-sum {
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 100%;
+    padding-top: 30px;
+    h4 {
+        text-align: right;
+        font-size: 22px !important;
+        margin-top: 20px !important;
+    }
+    h5 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+    ul:not(.parsley-errors-list) {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        // margin-top: 44px;
+        display: block;
+        border: 1px solid #efefef;
+        padding: 15px;
+        border-radius: 12px;
+        li {
+            font-size: 16px;
+            padding: 10px 0;
+            border-bottom: 2px solid #f9f9f9;
+
+            &:last-child {
+                border-bottom: 0 none;
+            }
+            b {
+                color: var(--main-color);
+            }
+            span {
+                color: #000;
+                float: right;
+                font-weight: 500;
+                font-size: 18px;
+                i {
+                    font-size: 16px;
+                    color: var(--secondary-color);
+                    float: left;
+                    margin-top: 4px;
+                    margin-right: 8px;
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}
+
+/** booking payment notes */
+.payment_notes {
+    padding: 11px;
+    border: 2px solid #ada6ec;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+    span {
+        font-size: 16px;
+        margin-bottom: 8px;
+        display: inline-block;
+    }
+
+    
+}

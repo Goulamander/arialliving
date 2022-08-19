@@ -1,0 +1,1 @@
+<p>Hi <?php echo e($booking->user->first_name); ?>,</p><p><br></p><p>your booking with the following details has been cancelled:</p><p><br></p><p><?php echo $booking->getBookingDetails(); ?></p>

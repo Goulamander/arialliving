@@ -1,0 +1,163 @@
+:root {
+
+    --bg-color: #fff;
+
+    --brand-color: #191f28;
+    --main-color: #6151d8;
+    --secondary-color: #18D2BA;
+     
+    --paragraph-color: #3a3a3a;
+    --font-color: #616B85;
+    --font-color-light: #7d859c;
+    --font-link-color: #4a437d;
+    --font-link-color-hover: #39335f;
+    --icon-color: #7d859c;
+
+    --heading-color: #292922;
+
+    --c-green: #18D2BA;
+    --c-orange: #ffb93a;
+    --c-red: #e91e40;
+    --c-red-hover: #ad163c;
+    --c-gray: #7d859c;
+
+    --border-color: #ececec;
+    --border-color-focus: #cacaca;
+    --input-font-color: #000;
+
+    --row-highlight-color: #f9f9fa;
+    --row-highlight-a-color: #e3e3ee;
+}
+
+
+/** Screen sizes */
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-max: 576px;
+// Small tablets (portrait view)
+$screen-md-max: 768px;
+// Tablets and small desktops
+$screen-lg-max: 992px;
+// Large tablets and desktops
+$screen-xl-max: 1200px;
+//
+$screen-xxl-max: 1358px;
+
+// Body
+$body-bg: #f5f8fa;
+$gray-bg: #eff1f6; //used to be: #f2f4f6
+
+$sc-bg: #EFF6F6;
+$sc-dark: #303B4D;
+$sc-left-menu-active: #3d4b61;
+$bg-green: #34986e;
+$sc-green: #18D2BA;
+$primary-color: #245d6a;
+$primary-color-hover: $bg-green;
+
+
+$inline-link: #0071e0;
+$inline-mute: #727e9f;
+$light-gray: #f8f8f8;
+
+// Borders
+$laravel-border-color: darken($body-bg, 10%);
+$list-group-border: $laravel-border-color;
+$navbar-default-border: $laravel-border-color;
+$panel-default-border: $laravel-border-color;
+$panel-inner-border: $laravel-border-color;
+
+// Brands
+$brand-primary: #3097D1;
+$brand-info: #8eb4cb;
+$brand-success: #2ab27b;
+$brand-warning: #cbb956;
+$brand-danger: #bf5329;
+
+// label color
+$brand-green: #91DA42;
+$brand-gray: #8d98ac;
+$brand-light-gray: #d2d8e4;
+$brand-red: #FC5F62;
+$brand-yellow: #d6aa14;
+$brand-purple: #9C27B0;
+$brand-indigo: #3F51B5;
+
+
+
+
+
+// Heading Color
+$heading-text-color:  #000;
+
+
+$font-size-base: 14px;
+$line-height-base: 1.6;
+$text-color: #616B88;
+
+$text-color-light: #7f929f;
+
+
+//Status colors
+$status-gray: #8d98ac;
+$status-lgray: #d2d8e4;
+$status-green: #0dd3be;
+$status-red: #ef5f63;
+
+
+// Navbar
+$navbar-default-bg: #fff;
+$navbar-background-active: rgb(61, 75, 97);
+$navbar-border-active: #18D2BA;
+$navbar-border-hover: #b8eae4;
+$nav-header-height: 50px;
+$nav-brand: #262D3F;
+$sidebar-bg: #fff;
+$sidebar-width: 210px;
+$sidebar-minimize-width: 59px;
+$max-screen-width-sidebar-resize: 991px;
+
+// Buttons
+$btn-default-color: $text-color;
+
+// Inputs
+$border-color: rgba(0,0,0,.15);
+$border-color-on-focus: #4ebb9f;
+$input-color-placeholder: lighten($text-color, 30%);
+
+
+// Panels
+$panel-default-heading-bg: #fff;
+$panel-header-font-color: #596f7f;
+
+// Color
+$color-red: #FC5F62;
+$color-light-blue: rgba(135, 206, 235, 0.27);
+$color-light-green: rgba(124, 207, 175, 0.1);
+
+// DataTable
+$table-border-color: #EDF0F7;
+$table-pagination-border-color: #efefef;
+$table-pagination-number-color: #656565;
+// Pagination-Button
+$button-primary-color: #18d2ba;
+$button-primary-hover-color: #7ccfaf;
+$button-delete-red: #FC5F62;
+$button-secondary: #262D3F;
+
+
+
+// Label
+$label-green: #0dd3be;
+
+
+// color
+$green: #29c184;
+$yellow: #ffcd04;
+$blue: #5c98cc;
+$red: #de4447;
+$blue: #5c98cc;
+$gray: #eaeaea;
+
+//Hover, active, focus
+$amount: 10;

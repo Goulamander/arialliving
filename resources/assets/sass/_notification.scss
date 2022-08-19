@@ -1,0 +1,33 @@
+.notification {
+    .notification-item-mark-color {
+        position: absolute;
+        left: 0;
+        // border-radius: .25rem 0 0 .25rem;
+        height: 100%;
+        width: 5px;
+        top: 0;
+        display: block;
+    }
+    .list-group-item:last-child .notification-item-mark-color {
+        border-bottom-left-radius: .25rem;
+    }
+    .list-group-item:first-child .notification-item-mark-color {
+        border-top-left-radius: .25rem;
+    }
+    .inline-table {
+        display: inline-table;
+    }
+}
+
+.be-notifications {
+    width: max-content;
+    max-width: 400px;
+}
+
+.noti-read {
+    background-color: $label-green;
+}
+
+.noti-unread {
+    background-color: $brand-red;
+}

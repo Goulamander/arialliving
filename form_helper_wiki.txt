@@ -1,0 +1,79 @@
+
+
+Form Helpers
+
+Available fields:
+
+    Regular fields:
+        text, 
+        email,
+        number,
+        password,
+        hidden,
+        select, 
+        radio, 
+        checkbox,
+        textarea,
+        multi-select, 
+
+    Pickers: 
+        date,
+        datetime,
+        time,
+
+    Templates:
+        line-items,
+        office-hours,
+        repeating-options
+
+
+Field Options:
+
+    - class: array()
+        @key: group -> input group class value
+        @key: input -> input class value
+  
+    - label: string
+   
+    - type: string (value must be included in the available field types)
+  
+    - validations: string
+        @accepted values: required|max:255|digits:5
+   
+    - options: array() - for checkbox, radio, select, multi-select fields.
+        @key: option key
+        @val: option value    
+   
+    - tooltip: string - Tooltip message
+
+    - conditions: array()
+        @fields: field list to show or hide, separated by |
+        @if_value: accepted conditions: in:a,b,c, null, is:a, not:a
+
+    - data: array()
+        @key: attribute_name
+        @val: attribute_value
+
+        Autocomplete fields:
+            - data: [
+                autocomplete: true
+                source: data_source (Built-in sources: residents, users, buildings, items)
+                return: return field's key. (id, name, etc...)
+            ]
+
+        Select2 fields:
+            -data: [
+                s2: true
+                source: data_source (Built-in sources: residents, users, buildings, items)
+                return: return field's key. (id, name, etc...)
+            ]
+
+
+
+
+
+
+
+
+
+

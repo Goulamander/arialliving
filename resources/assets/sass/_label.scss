@@ -1,0 +1,37 @@
+
+
+.label {
+    color: #fff;
+    background-color: #191f28;
+    padding: 1px 12px 1px;
+    border-radius: 23px;
+    font-size: 13px;
+    font-weight: 400;
+    white-space: nowrap;
+    display: inline-block;
+    margin-bottom: 8px;
+
+    &.l-flag {
+        color: var(--c-red) !important;
+        background-color: transparent;
+        padding: 0;
+        i {
+            font-size: 17px;
+        }
+    }
+
+    &.l-green {
+        background: var(--c-green) !important;
+    }
+    &.l-red {
+        background: var(--c-red) !important;
+    }
+    &.l-yellow {
+        background: var(--c-orange) !important;
+    }
+    &.l-gray {
+        background: var(--c-gray) !important;
+    }
+}
+
+

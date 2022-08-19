@@ -1,0 +1,171 @@
+
+$uploader-area-height: 100px;
+
+/** Thumbnail uploader */
+.image-thumb-uploader {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 20px;
+}
+
+
+/** FilePond Styling */
+.filepond--panel-root {
+    background: #fbfbfb;
+    border: 2px solid #ececec;
+}
+.filepond--root .filepond--drop-label {
+    min-height: $uploader-area-height;
+
+    label {
+        font-size: 14px;
+        line-height: 1;
+    }
+}
+.filepond--root {
+    h4 {
+        font-size: 17px;
+        margin-top: 0;
+        color: #000;
+        font-weight: 400;
+        margin: 0;
+        line-height: 1.4;
+    }
+}
+.filepond--root:not(.image-thumb-uploader) {
+    .filepond--item[data-filepond-item-state="processing-complete"] {
+        opacity: 0;
+        visibility: hidden;
+        height: 0 !important;
+        @include transition(.2s);
+    }
+}
+
+/** PDF List */
+._pdf_list {
+    display: block;
+    width: 100%;
+
+    ._pdf {
+        width: 100%;
+        display: block;
+        position: relative;
+        margin-bottom: 7px;
+        padding: 12px 0;
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: #fbfbfb;
+        border: 1px solid #eef1f0;
+        cursor: move;
+
+
+        &:before {
+            content: "";
+            background-image: url('/img/pdf_icon.png');
+            background-size: 18px;
+            width: 19px;
+            height: 22px;
+            display: block;
+            position: absolute;
+            background-repeat: no-repeat;
+            margin-top: 2px;
+            left: 15px;
+        }
+
+        a {
+            color: #444;
+            padding: 15px;
+            padding-left: 45px;
+
+            &:hover,
+            &:active {
+                color: #000;
+                text-decoration: underline;
+            }
+        }
+
+        ._actions {
+            position: relative;
+            float: right;
+            display: block;
+
+            .dropdown-item {
+                font-size: 15px;
+                padding: 12px 20px;
+            }
+
+            a.no-btn {
+                padding: 16px;
+            }
+        }
+
+        &:hover {
+            background-color: #fbfbfb;
+           
+        }
+    }
+
+}
+
+/** Image gallery **/
+._image_gallery {
+
+    ._img {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: var(--brand-color);
+        border-radius: 3px;
+        width: 24.2%;
+        height: 100px;
+        display: block;
+        float: left;
+        margin-right: 4px;
+        margin-bottom: 4px;
+        position: relative;
+        cursor:move; 
+        cursor:-webkit-grab; 
+        cursor:-moz-grab; 
+        cursor:grab;
+
+        &:active {
+            cursor: grabbing;
+            cursor: -moz-grabbing;
+            cursor: -webkit-grabbing;
+        }
+        
+        &:after {
+            content: "";
+            position: absolute;
+            background-color: rgba(0,0,0,.3);
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 1;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .no-btn {
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            color: #fff;  
+        }
+
+        &:hover {
+            &:after {
+                visibility: visible;
+                opacity: 1;
+            }
+            .no-btn {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+
+    }
+}

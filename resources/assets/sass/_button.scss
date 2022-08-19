@@ -1,0 +1,136 @@
+
+
+.btn {
+
+    &.btn-arrow > i {
+        font-size: 15px;
+        padding-left: 12px;
+        float: right;
+        margin-top: 2px;
+    }
+
+    &.btn-simple {
+        color: #333;
+        border-color: transparent;
+
+        &:hover,
+        &:active,
+        &:focus {
+            border-color: #ececec;
+            color: #000;
+        }
+    }
+
+    &.btn-outline {
+        border: 2px solid;
+        background: transparent;
+        padding: 9px 23px;
+    }
+
+    &.btn-brand {
+        background-color: var(--brand-color);
+        border-color: var(--brand-color);
+        &:hover,
+        &:active {
+            background-color: #000;
+            border-color: #000;
+        }
+    }
+
+    &.btn-purple {
+        background-color: #bb87ff;
+        border-color: #bb87ff;
+        &:hover,
+        &:active {
+            background-color: #986dd0;
+            border-color: #986dd0;
+        }
+    }
+    &.btn-danger {
+        background-color: var(--c-red);
+        border-color: ar(--c-red);
+        &:hover,
+        &:active {
+            background-color: var(--c-red-hover);
+            border-color: var(--c-red-hover);
+        }
+    }
+    &.btn-cancel {
+        // border: 1px solid ar(--c-red) !important;
+        // color:  ar(--c-red);
+        border: 1px solid $color-red !important;
+        color:  $color-red;
+        background-color: transparent;
+        padding: 4px 15px;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: transparent;
+        }
+
+    }
+
+    &.loading {
+        font-size: 0 !important;
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 50px;
+        padding: 0 !important;
+        border: 3px solid #78909c;
+        margin: auto;
+        border-bottom: 3px solid rgba(255,255,255, 0);
+        border-left: 3px solid rgba(255,255,255, 0);
+        cursor: default;
+
+        background-color: transparent !important;
+        animation-name: rotateAnimation;
+        -webkit-animation-name: wk-rotateAnimation;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        animation-delay: 0.2s;
+        -webkit-animation-delay: 0.2s;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+
+        &.btn-primary {
+            border: 3px solid #54d5c1;
+            border-bottom: 3px solid rgba(255,255,255, 0);
+            border-left: 3px solid rgba(255,255,255, 0);
+        }
+        &.btn-secondary {
+            border: 3px solid $blue;
+            border-bottom: 3px solid rgba(255,255,255, 0);
+            border-left: 3px solid rgba(255,255,255, 0);
+        }
+
+        &.btn-arrow {
+            i {
+                display: none;
+            }
+        }
+
+
+    }
+
+    @keyframes rotateAnimation {
+        0%   {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+    }
+    @-webkit-keyframes wk-rotateAnimation {
+        0%   {-webkit-transform: rotate(0deg);}
+        100% {-webkit-transform: rotate(360deg);}
+    }
+}
+
+/* remove btn styling from a button */
+.no-btn {
+    right: 4px;
+    top: 4px;
+    border: 0;
+    background-color: transparent;
+    z-index: 9;
+    i {
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,27 @@
+.line-items {
+
+    list-style: none;
+
+    .line-item {
+        position: relative;
+        display: inline-block;
+        background-color: #f8f8f8;
+        padding: 8px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        width: 100%;
+
+        h4 {
+            margin: 0;
+        }
+        .remove_line_item_btn {
+            display: block;
+            position: absolute;
+            right: 0;
+            z-index: 9;
+        }
+
+
+
+    }
+}

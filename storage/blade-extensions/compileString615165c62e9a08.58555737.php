@@ -1,0 +1,1 @@
+New Booking - <?php echo e($booking->getNumber()); ?>

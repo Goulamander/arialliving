@@ -1,0 +1,88 @@
+{
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "type": "project",
+    "repositories": [
+        {
+             "type": "composer", 
+             "url": "https://packagist.org"
+        },
+        { "packagist": false }
+    ],
+    "require": {
+        "php": ">=7.2.5",
+        "laravel/framework": "^7.0",
+        "prettus/l5-repository": "^2.6",
+        "intervention/image": "^2.3",
+        "yajra/laravel-datatables-oracle": "^9.0",
+        "barryvdh/laravel-dompdf": "^0.8.0",
+        "fx3costa/laravelchartjs": "^2.2",
+        "radic/blade-extensions": "^7.0",
+        "guzzlehttp/guzzle": "^6.3",
+
+        "doctrine/dbal": "^2.9",
+        "fideloper/proxy": "^4.0",
+        "spatie/period": "^1.5",
+        "eway/eway-rapid-php": "^1.3",
+        "mcred/detect-credit-card-type": "^0.1.0",
+        "laravel/ui": "^2.0",
+        "laravel/helpers": "^1.2",
+        "yajra/laravel-datatables-buttons": "^4.9",
+        "laravel/nexmo-notification-channel": "^2.3",
+        "league/flysystem-cached-adapter": "^1.1",
+        "graham-campbell/markdown": "^13.1",
+        "htmlmin/htmlmin": "^7.0",
+        "simplesoftwareio/simple-qrcode": "^4.1",
+        "alexusmai/laravel-file-manager": "^2.5",
+        "lab404/laravel-impersonate": "^1.7"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~7.0",
+        "symfony/css-selector": "^4.0",
+        "symfony/dom-crawler": "^4.0",
+        "filp/whoops": "~2.0"
+    },
+    "autoload": {
+        "classmap": [
+            "database"
+        ],
+        "files": [
+            "php_config.php"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ],
+        "post-install-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan optimize"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}

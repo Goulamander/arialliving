@@ -1,0 +1,110 @@
+<?php
+
+namespace App\Http\ViewComposers\Resident;
+
+use Auth;
+use Route;
+use Illuminate\View\View;
+
+use App\Models\Category;
+use App\Models\BookableItem;
+use App\Models\Building;
+use App\Models\User;
+
+use Storage;
+use Session;
+
+class ViewHomeComposer
+{
+    
+
+    /**
+     * Instantiate a new instance of the Composer
+     *
+     * @param Illuminate\Http\Request
+     */
+    public function __construct() {
+    }
+
+
+
+    /**
+     * Bind data to the view
+     *
+     * @param View $view
+     * @return void
+     */
+    public function compose(View $view) {
+
+        $building = Auth::user()->building->first();
+
+        // for the back-end users add all buildings in so they can toggle between them.
+        if( ! Auth::user()->isResident() ) {
+        
+            $buildings = Building::myBuildings()
+                ->orderBy('name', 'ASC')
+                ->get();
+
+            if(!$buildings) {
+                abort(404);
+            }
+            
+            if( ! Session::get('building_preview_id') ) {
+                Session::put('building_preview_id', $buildings[0]->id);
+            }   
+
+            $building = $buildings->filter(function($building) {
+                    return $building->id == Session::get('building_preview_id');
+                })->first();
+        }
+        
+
+        if(! $building ) {
+            abort(404);
+        }
+
+        
+
+        $building->image = $building->getGalleryImages(true);
+        
+        // _get items
+        $items = $building->bookableItems->where('status', 1);
+
+        // Hide private items from Residents
+        if(Auth::user()->isResident()) {
+            // todo: replace this with the resident level settings...
+            $items = $items->where('is_private', 0);
+        }
+
+
+        // add the thumb url
+        foreach($items as $item) {
+            $item->thumb = $item->is_thumb ? $item->getThumb('820x500') : '';
+            $item->type_label = BookableItem::$TYPE_LABEL[$item->type];
+            $item->price_html = $item->getPriceTag(true);
+        }
+
+        // Grab the categories
+        $categories = Category::where('status', 1)->orderBy('order')->get();
+
+        $sliders = [];
+
+        foreach($categories as $category) {
+            $sliders[str_slug($category->name)] = [
+                'title' => $category->name,
+                'items' => $items->where('category_id', $category->id)->values()
+            ];
+        }
+
+        $sliders = json_decode(json_encode($sliders));
+
+        /** Add the user's active bookings if any */
+        $bookings = Auth::user()->activeBookings;
+        
+        // Send the data to the view
+        $resident_building = $building;
+
+        $view->with(compact('resident_building', 'sliders', 'bookings'));
+    }
+
+}

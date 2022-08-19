@@ -1,0 +1,2 @@
+<h2>Hi <?php echo e($user->first_name); ?></h2>
+				<p>You've been invited to Aria Living's Reservations platform. Just tap the Complete Setup button below to finalise your admin account.</p><p><a href="<?php echo e($activationLink); ?>"  class="btn btn-g">Complete Setup</a></p>

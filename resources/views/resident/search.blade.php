@@ -1,0 +1,1 @@
+@include('resident._items')

@@ -1,0 +1,499 @@
+
+/** Colors */
+
+$white: #ffffff;
+$blue-grey-400: #78909c !default;
+$grey-900: #212121 !default;
+$purple-400: #54d5c1 !default;
+$green-500: #54d5c1 !default;
+$green-600: #54d5c1 !default;
+$dark-bg:    #191f28 !default;
+$card-bg:    #20262f !default;
+
+.theme-aria {
+
+    .text-light {
+        color: var(--font-color) !important;
+    }
+
+    .btn-primary {
+        background: $green-500;
+        &:active,
+        &:hover,
+        &:focus{
+            background: $purple-400;
+        }
+        &.btn-simple{
+            border-color: $green-500;
+            color: $green-500;
+            background: transparent;
+        }
+
+        &:disabled {
+            background: $blue-grey-400;
+        }
+    }
+    .page-loader-wrapper,
+    .active-bg{
+        background:$dark-bg;
+    }
+    .sidebar {
+        font-family: inherit;
+        
+        .menu{
+            .list{
+                li.active.open {                   
+                    .active a{
+                        color:$green-500;
+                    }  
+                }
+                a{
+                    &:hover{
+                        color:$green-500;
+                    }
+                }
+            }
+        }
+
+        &.h_menu{
+            .menu li{
+                &.active.open{
+                    > a{
+                        color: $green-500;
+                        &:before{
+                            background: $green-500;;
+                        }
+                    }
+                }
+                a{
+                    &:hover{
+                        &:before{
+                            background: $green-500;;                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-logo {
+        line-height: 63px;
+        width: 135px !important;
+    }
+    
+    nav.top_navbar {
+        ul.list {
+            li.active {
+                > a {
+                    color: $green-500;
+                    &:before{
+                        background: $green-500;;
+                    }
+                }
+            }
+            a:hover {
+                color: $green-500;
+                &:before {
+                    background: $green-500;;                            
+                }
+            }
+        }
+    }
+    .checkbox input[type="checkbox"]:checked+label::after{
+        border-color:$green-500;
+        background: $green-500;
+        color: $white;
+    }  
+    .nav-tabs {
+        .nav-link.active {
+            border: 1px solid $green-500 !important;
+            background: $green-500;
+            color: $white;
+        }
+    }
+    
+    .card {
+
+        h4 {
+            line-height: 1.7;
+        }
+        .header {
+            h2{
+                font-size: 17px;
+
+                &:before{
+                    background: $green-500;
+                }
+                strong{
+                    color: #000;
+                }
+            }
+            .dropdown-menu{
+                li{
+                    a {
+                        padding: 7px 18px !important;
+                        font-weight: 500;
+
+                        &:hover{
+                            background-color: $green-500;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .body {
+            p {
+                color: #000;
+                font-size: 16px;
+                margin: 0;
+                line-height: 1.4;
+
+                .bordered {
+                    border: 1px solid #ecefee;
+                    padding: 5px;
+                    border-radius: 5px;
+                    display: inline-block;
+                    position: relative;
+                    clear: both;
+                }
+            }
+            small {
+                font-size: 90%;
+            }
+        }
+    }
+    .authentication {
+        .navbar, .page-header{
+            background: $green-500 !important;
+        }
+    }    
+    .form-control:focus,
+    .form-control:focus+.input-group-addon, .form-control:focus ~ .input-group-addon{
+        border-color: $green-500;
+    }
+
+
+    &.theme-dark{
+        .top_navbar{
+            background: $green-500;
+        }
+        .input-group-focus{
+            .input-group-addon{
+                border-color: $green-500;
+            }
+        }
+    }
+
+    .booking-single--item-title h3 {
+        color: $green-500;
+    }
+    
+}
+
+
+
+/** Badges */ 
+
+.badge {
+    padding: 4px 8px 3px 8px;
+}
+
+/** Card mods */
+
+.card {
+    h1,h2,h3,h4,h5 {
+        color: #000;
+        line-height: 1.2;
+    }
+
+    h3 {
+        .label {
+            float: none;
+            vertical-align: middle;
+            margin-top: 7px;
+            padding: 4px 12px;
+            font-size: 14px;
+
+            & + .label {
+                margin-right: -10px !important;
+            }
+        }
+    }
+    h4 {
+        font-size: 20px;
+        .label {
+            float: none;
+            vertical-align: middle;
+            margin: 0 !important;
+        }
+    }
+}
+
+
+/** Opening Hours */
+ul.opening-hours {
+    li {
+        padding-bottom: 5px;
+        span {
+            display: inline-block;
+            min-width: 100px;
+        }
+        small {
+
+        }
+    }
+}
+
+
+/** Profile header */
+.profile-page .profile-header {
+
+    .detail.building {
+        margin-left: 210px;
+    
+        * {
+            color: #fff;
+        }
+        p {
+            color: #8392a5;
+        }
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+    
+        .main-stats {
+            max-width: 500px;
+            margin: auto;
+            margin-right: 0;
+        }
+    } 
+}
+
+
+
+
+/** Item/Building Single page Top banner **/
+.with_banner {
+    margin-top: 200px;
+}
+.single_top_banner {
+    background-size: cover;
+    background-position: center;
+    background-color: var(--brand-color);
+    height: 340px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    .placeholder {
+
+    }
+
+    &:after {
+        content: "";
+        background-color: rgba(0,0,0, .4);
+        width: 100%;
+        height: 340px;
+        position: absolute;
+        z-index: 0;
+    }
+
+    .buttons {
+        
+        position: absolute;
+        z-index: 99;
+        bottom: 0;
+        text-align: center;
+        padding: 4px 20px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: 0;
+        top: 0;
+        vertical-align: middle;
+        height: 62px;
+    }
+
+    button.edit {
+        position: absolute;
+        z-index: 99;
+        bottom: 0;
+        background: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        border-radius: 27px;
+        padding: 4px 20px;
+        font-weight: bold;
+        font-size: 14px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: 0;
+        top: 0;
+        vertical-align: middle;
+        height: 40px;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+    .profile-page .profile-header .detail.building {
+        margin: 0;
+    }
+}
+
+
+
+.grad-bg {
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+
+/** Stuff Chat */
+.chat-app {
+
+    .chat {
+        margin-left: 0;
+        border-left: 0;
+    }
+}
+
+
+/** Admin area: Main Navigation */
+
+.sidebar {
+    &.h_menu {
+        background: transparent;
+        height: 65px;
+        width: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        line-height: 1.2;
+        max-width: 925px;
+        z-index: 99;
+
+        .menu {
+            .list {
+                margin: 0;
+            }
+            li {
+                ul li {
+                    &.active.open {
+                        & > a:before {
+                            content: '\f30f';
+                            position: absolute;
+                            transition: .5s;
+                            left: 15px;
+                            font-size: 12px !important;
+                            font-family: 'Material-Design-Iconic-Font';
+                            color: $green-500;
+                            top: 10px !important;
+                            transform: initial;
+                            width: 0;
+                        }
+                    }
+                }
+                a {
+                    margin: 0;
+                    padding: 23px 10px 20px;
+                    padding-right: 20px; 
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+}
+
+section.content {
+    margin-top: 65px;
+}
+
+
+/* Build manager Card */
+.building-staff {
+    margin-bottom: 15px;
+
+    border: 1px solid #ecefee;
+    border-radius: 8px;
+    padding: 15px 8px;
+
+    h4 {
+        font-size: 16px;
+        line-height: 1.4 !important;
+        font-weight: bold;
+        margin: 0;
+
+        span {
+            color: var(--font-color);
+            font-weight: 300;
+        }
+    }
+
+    a {
+        display: inline-block;
+        padding-right: 8px;
+        margin-right: 5px;
+        border-right: 1px solid #ecefee;
+        line-height: 1.2;
+
+        &:last-child {
+            margin-right: 0;
+            border-right: unset;
+        }
+    }
+}
+
+
+/** Cancel booking icon */
+.icon-calendar {
+    &.cancel:after {
+        font-family: "Material Icons";
+        content: "do_not_disturb_alt";
+        color: #FF3636;
+        display: inline-block;
+        font-size: 24px;
+        border-radius: 100%;
+        margin-left: -13px;
+        position: absolute;
+        top: 36px;
+    }
+}
+
+
+/** Transactions */
+.transactions {
+    // border: 1px solid #efefef;
+    // padding: 0 18px;
+    // border-radius: 12px;
+
+    .transaction {
+        position: relative;
+        padding: 10px 0;
+        border-bottom: 2px solid #f9f9f9;
+
+        h4.refund {
+            color: red;
+        }
+
+        .refund_btn {
+            position: absolute;
+            font-size: 13px;
+            top: 50%;
+            margin-top: -10px;
+        }
+    }
+}

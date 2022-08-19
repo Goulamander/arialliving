@@ -1,0 +1,272 @@
+$booking-room-color: #6846b9;
+$booking-room-color-bg: #e0d4fd;
+
+$booking-event-color: #ffc107;
+$booking-event-color-bg: #f7e8bc;
+
+$booking-hire-color: #79d0bf;
+$booking-hire-color-bg: #ceece7;
+
+$booking-service-color: #00bcd4;
+$booking-service-color-bg: #c9f3f9;
+
+
+.admin_calendar_page {
+    background-color: #fff;
+    // position: fixed;
+    margin-top: -30px;
+    width: 100%;
+
+    .calendar_header {
+
+        position: absolute;
+        z-index: 9;
+        margin-left: 275px;
+        margin-top: 8px;
+        width: 100%;
+        margin-bottom: 5px;
+        height: 45px;
+        z-index: 0;
+
+
+        & > strong {
+            display: block;
+            float: left;
+            margin-top: 11px;
+            font-weight: 400;
+            font-size: 13px;
+            margin-right: 10px;
+        }
+
+        .form_group {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .select2-container--default .select2-selection--single,
+        .form-control {
+            font-size: 15px;
+            background-color: #fff;
+            border-width: 1px;
+            height: 40px;
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
+            top: 7px;
+            right: 2px;
+        }
+
+        .building_picker {
+            max-width: 280px;
+            width: 100%;
+        }
+        
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .admin_calendar_page {
+        #calendar_filters {
+            display: flex;
+            position: initial;
+            align-items: baseline;
+            height: initial;
+            background: #f4f7f6;
+            margin: 0;
+            place-items: center;
+            padding: 0 15px;
+            button,
+            .form-control {
+                font-size: 85%;
+                height: 30px;
+                margin: 0;
+            }
+            & > strong {
+                margin-top: 0;
+            }
+            & > div,
+            & > button {
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+#calendar {
+
+    padding: 0;
+
+    .fc-toolbar {
+        background-color: #f4f7f6;
+        height: 55px;
+        padding: 0 15px;
+
+        .fc-left {
+            margin-left: 20px;
+        }
+        .fc-right {
+            margin-right: 20px;
+        }
+
+        h2 {
+            font-size: 26px;
+            line-height: 50px;
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+        .fc-button {
+            color: #192028 !important;
+            border-color: var(--border-color) !important;
+            background-color: #fff;
+            border: 1px solid;
+            height: 30px;
+            line-height: 8px;
+            font-size: 13px;
+            padding: 0 12px;
+        }
+    }
+
+
+    .fc-day-header {
+        line-height: 31px;
+        span {
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        &.fc-today {
+            background-color: #6151d8b8;
+            color: #fff;
+        }
+    }
+
+
+    td.fc-today {
+        background: #f5f4fb !important;
+    }
+
+    .fc-daygrid-day-number {
+        padding: 0 4px !important;
+    }
+
+    .fc-daygrid-day-bottom {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    a.fc-event {
+        background-color: transparent;
+        font-size: 13px;
+        color: #000 !important;
+        border: 0 none;
+        border-radius: 5px;
+        margin-bottom: 2px;
+        cursor: pointer;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: #f8f8f8;
+        }
+        
+        .fc-h-event .fc-event-main {
+            color: #000 !important;
+        }
+
+        .fc-daygrid-event-dot {
+            margin-top: -1px;
+        }
+
+
+        .fc-content {
+            span,
+            small {
+                display: block;
+                float: left;
+            }
+            small {
+                font-weight: 600;
+                margin-top: 3px;
+            }
+            .fc-time {
+                font-weight: 400;
+                margin-right: 5px;
+            }
+            .fc-item {
+                font-weight: 600;
+            }
+            .fc-id {
+                float: right;
+            }
+            .fc-title {
+                font-weight: 400;
+                clear: both;
+            }
+            .building {
+                clear: left;
+            }
+            .fc-details {
+                margin-top: 5px;
+                clear: left;
+                .sub-title {
+                    font-size: 13px;
+                }
+                .building {
+                    color: #9394b1;
+                }
+                small {
+                    clear: both;
+                }
+
+            }
+        }
+
+        // Grid view
+
+        &.fc-daygrid-block-event {
+            border-left: 4px solid;
+            padding: 2px 6px;
+            .fc-event-time {
+                font-weight: 400;
+                color: #000;
+            }
+            .fc-event-title {
+                font-weight: 600;
+                color: #000 !important;
+            }
+        }
+
+        // Week view
+        &.fc-timegrid-event {
+
+            border-left: 4px solid;
+            padding: 6px;
+        
+            .fc-event-time {
+                font-weight: 400;
+                font-size: 12px;
+                color: #000 !important;
+            }
+            .fc-event-title {
+                font-weight: 600;
+                font-size: 13px;
+                color: #000 !important;
+            }
+        }
+
+        // Day view
+        &.fc-daygrid-event {
+            .fc-event-time {
+                padding-right: 5px;
+                float: left;
+                clear: both;
+            }
+        }
+
+    }
+
+}

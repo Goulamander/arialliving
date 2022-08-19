@@ -1,0 +1,184 @@
+@extends('layouts.dashboard')
+
+@section('title', $resident_building->name.' | '.config('app.name'))
+
+@section('content')
+    @include('layouts.messagesTemplate')
+
+    <div class="panel resident__front-end">
+
+        <div class="panel-header"></div>
+
+        <div class="panel-body">
+            {{-- Loop the active bookings --}}
+            @if(!$bookings->isEmpty())
+                <h4>Your Active Bookings</h4>
+                <div class="embla item__slider">
+                    <div class="embla__dots"></div>
+                    <div class="embla__viewport">
+                        <div class="embla__container">
+                            @foreach($bookings as $item)
+                            <div class="embla__slide">
+                                @php
+                                $item->bookableItem->thumb = $item->bookableItem->is_thumb ? $item->bookableItem->getThumb('820x500') : ''
+                                @endphp
+                                <div class="item__card booking" style="background-image: url('{{$item->bookableItem->thumb ?? ''}}')">
+                                    <a data-open-booking="{{$item->id}}">
+                                        <div class="card_body">
+                                            <h3>{{$item->getNumber()}}</h3>
+                                            <div class="booking-date">
+                                                <span class="date">{{bookingDate($item->start, $item->end)}}</span>
+                                                <span class="time">{{bookingTime($item->start, $item->end)}}</span>
+                                            </div>
+                                            <div class="booking-title">
+                                                <span>{{$item->bookableItem->getTypeLabel()}}</span>
+                                                <h4>{{$item->bookableItem->title}}</h4>
+                                            </div>
+                                        </div> 
+                                        <div class="card_footer">
+                                            <span class="book">Manage</h3>
+                                        </div>
+                                    </a>   
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+                    <button class="embla__button embla__button--prev" type="button">
+                        <svg class="embla__button__svg" viewBox="137.718 -1.001 366.563 643.999">
+                            <path d="M428.36 12.5c16.67-16.67 43.76-16.67 60.42 0 16.67 16.67 16.67 43.76 0 60.42L241.7 320c148.25 148.24 230.61 230.6 247.08 247.08 16.67 16.66 16.67 43.75 0 60.42-16.67 16.66-43.76 16.67-60.42 0-27.72-27.71-249.45-249.37-277.16-277.08a42.308 42.308 0 0 1-12.48-30.34c0-11.1 4.1-22.05 12.48-30.42C206.63 234.23 400.64 40.21 428.36 12.5z"></path>
+                        </svg>
+                    </button>
+                    <button class="embla__button embla__button--next" type="button">
+                        <svg class="embla__button__svg" viewBox="0 0 238.003 238.003">
+                            <path d="M181.776 107.719L78.705 4.648c-6.198-6.198-16.273-6.198-22.47 0s-6.198 16.273 0 22.47l91.883 91.883-91.883 91.883c-6.198 6.198-6.198 16.273 0 22.47s16.273 6.198 22.47 0l103.071-103.039a15.741 15.741 0 0 0 4.64-11.283c0-4.13-1.526-8.199-4.64-11.313z"></path>
+                        </svg>
+                    </button>
+                </div>
+            @endif
+
+            {{-- All empty --}}
+            @if(!$sliders)
+            <div class="embla item__slider">
+                <div class="embla__dots"></div>
+                <div class="embla__viewport">
+                    <div class="embla__container">
+                        <div class="embla__slide"><div class="item__card_placeholder"></div></div>
+                        <div class="embla__slide"><div class="item__card_placeholder"></div></div>
+                        <div class="embla__slide"><div class="item__card_placeholder"></div></div>
+                    </div>
+                </div>
+                <button class="embla__button embla__button--prev" type="button">
+                    <svg class="embla__button__svg" viewBox="137.718 -1.001 366.563 643.999">
+                        <path d="M428.36 12.5c16.67-16.67 43.76-16.67 60.42 0 16.67 16.67 16.67 43.76 0 60.42L241.7 320c148.25 148.24 230.61 230.6 247.08 247.08 16.67 16.66 16.67 43.75 0 60.42-16.67 16.66-43.76 16.67-60.42 0-27.72-27.71-249.45-249.37-277.16-277.08a42.308 42.308 0 0 1-12.48-30.34c0-11.1 4.1-22.05 12.48-30.42C206.63 234.23 400.64 40.21 428.36 12.5z"></path>
+                    </svg>
+                </button>
+                <button class="embla__button embla__button--next" type="button">
+                    <svg class="embla__button__svg" viewBox="0 0 238.003 238.003">
+                        <path d="M181.776 107.719L78.705 4.648c-6.198-6.198-16.273-6.198-22.47 0s-6.198 16.273 0 22.47l91.883 91.883-91.883 91.883c-6.198 6.198-6.198 16.273 0 22.47s16.273 6.198 22.47 0l103.071-103.039a15.741 15.741 0 0 0 4.64-11.283c0-4.13-1.526-8.199-4.64-11.313z"></path>
+                    </svg>
+                </button>
+            </div>      
+            @endif
+
+            {{-- Loop the item sliders --}}
+            @foreach($sliders as $slider)
+                @if($slider->items)
+                <h2>{{$slider->title}}</h2>
+                <div class="embla item__slider">
+                    <div class="embla__dots"></div>
+                    <div class="embla__viewport">
+                        <div class="embla__container">
+                            @foreach($slider->items as $item)
+
+                            <div class="embla__slide">
+                                <div class="item__card {{$item->event ? 'event' : ''}}" style="background-image: url('{{$item->thumb ?? ''}}')">
+                                    <a href="/items/{{$item->type_label}}/{{$item->id}}">
+                                        @if($item->event)
+                                        <div class="card_event_header">
+                                            <div class="date">
+                                                <span class="days">{{dateFormat($item->event->event_date, 'd')}}</span>
+                                                <span class="month">{{dateFormat($item->event->event_date, 'M')}}</span>
+                                                <span class="year">{{dateFormat($item->event->event_date, 'Y')}}</span>
+                                            </div>
+                                            <div class="float-right">
+                                                <div class="time">
+                                                    <small>From</small>
+                                                    <span class="time">{{timeFormat($item->event->event_from)}}</span>
+                                                </div>
+                                                <div class="length">
+                                                    <small>Length</small>
+                                                    <span class="length">{{timeLength($item->event->event_from, $item->event->event_to)}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endif
+
+                                        <div class="card_body">
+
+                                            <h3>{{$item->title}}</h3>
+
+                                            @if($item->room && $item->room->low_availability)
+                                            <span class="status low">Low Availability</span>
+                                            @endif
+
+                                            @if($item->hire && $item->hire->low_availability)
+                                            <span class="status low">Low Availability</span>
+                                            @endif
+
+                                            @if($item->event && $item->event->low_seats !== NULL)
+                                                @if($item->event->low_seats == 0)
+                                                <span class="status low">Event Full</span>
+                                                @else
+                                                <span class="status low">{{$item->event->low_seats}} {{str_plural('Seat', $item->event->low_seats)}} Left</span>
+                                                @endif
+                                            @endif
+
+                                        </div>
+
+                                        <div class="card_footer">
+                                            @if(!$item->is_free)
+                                            <div class="pricing">
+                                                {!! $item->price_html !!}
+                                            </div>
+                                            @endif
+                                            <span class="book">{{$item->hire ? 'Order' : 'Book'}}</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                            </div>
+
+                            @endforeach
+                        </div>
+                    </div>
+                    <button class="embla__button embla__button--prev" type="button">
+                        <svg class="embla__button__svg" viewBox="137.718 -1.001 366.563 643.999">
+                            <path d="M428.36 12.5c16.67-16.67 43.76-16.67 60.42 0 16.67 16.67 16.67 43.76 0 60.42L241.7 320c148.25 148.24 230.61 230.6 247.08 247.08 16.67 16.66 16.67 43.75 0 60.42-16.67 16.66-43.76 16.67-60.42 0-27.72-27.71-249.45-249.37-277.16-277.08a42.308 42.308 0 0 1-12.48-30.34c0-11.1 4.1-22.05 12.48-30.42C206.63 234.23 400.64 40.21 428.36 12.5z"></path>
+                        </svg>
+                    </button>
+                    <button class="embla__button embla__button--next" type="button">
+                        <svg class="embla__button__svg" viewBox="0 0 238.003 238.003">
+                            <path d="M181.776 107.719L78.705 4.648c-6.198-6.198-16.273-6.198-22.47 0s-6.198 16.273 0 22.47l91.883 91.883-91.883 91.883c-6.198 6.198-6.198 16.273 0 22.47s16.273 6.198 22.47 0l103.071-103.039a15.741 15.741 0 0 0 4.64-11.283c0-4.13-1.526-8.199-4.64-11.313z"></path>
+                        </svg>
+                    </button>
+                </div>
+                @endif
+            @endforeach
+        </div>
+
+    </div>
+        
+@endsection
+
+
+@section('scripts')
+   
+@endsection
+
+
+@section('modals')
+    {{-- View booking --}}
+    @include('resident.bookings.modals.booking')
+@endsection
+

@@ -1,0 +1,31 @@
+{
+    "apps": [
+
+        {
+            "name": "laravel-echo-server",
+            "script": "laravel-echo-server",
+            "args": "start",
+            "max_memory_restart": "300M"
+        },
+
+        {
+            "name": "laravel-queue-worker",
+            "script": "artisan",
+            "exec_mode": "fork",
+            "interpreter": "php",
+            "instances": "1",
+            "args": "queue:work --tries=5 --sleep=1",
+            "max_memory_restart": "300M"
+        },
+
+        {
+            "name": "laravel-queue-listener",
+            "script": "artisan",
+            "exec_mode": "fork",
+            "interpreter": "php",
+            "instances": "1",
+            "args": "queue:listen --tries=1",
+            "max_memory_restart": "300M"
+        }
+    ]
+}

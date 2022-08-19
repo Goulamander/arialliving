@@ -1,0 +1,130 @@
+
+/* Bootstrap */
+
+.btn {
+    font-size: 15px;
+}
+
+.btn-b {
+    background-color: #6673d0;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: #5d69b9;
+    }
+    
+
+}
+
+/* LightGallery .js */
+
+body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+body.lg-on {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.lg-backdrop {
+    background-color: #000000ed;
+}
+
+
+/** Light-box iframe width */
+.lg-outer .lg-video-cont {
+   max-width: 70vw !important;
+
+   @include lg {
+       max-width: 100vh !important;
+   }
+}
+
+.lg-outer .lg-video {
+
+    -webkit-overflow-scrolling: touch !important;
+    overflow-y: scroll !important;
+
+    @include lg {
+        padding-bottom: 180% !important;
+    }
+
+    iframe {
+        border: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+    }
+}
+
+
+.lg-sub-html {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+
+    h4 {
+        font-size: 16px;
+        font-weight: 400;
+        color: #000;
+        margin-bottom: 18px;
+    }
+
+    .checkbox {
+        input[type="checkbox"]:checked + label {
+            color: #fff;
+        }
+        label {
+            color: #000;
+            padding: 10px 46px;
+            border-radius: 50px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+            cursor: hand;
+            
+            span {
+                position: relative;
+                z-index: 9;
+            }
+    
+            &:before {
+                border: 0 none;
+                width: 100%;
+                border-radius: 50px;
+                top: 0;
+                left: 0;
+                height: 48px;
+            }
+            &:after {
+                order: 0 none;
+                width: 100%;
+                border-radius: 50px;
+                top: 0;
+                left: 0;
+                height: 48px;
+                padding: 0;
+                text-align: left;
+                padding-left: 24px;
+                padding-top: 11px;
+            }
+    
+            b {
+                font-weight: 600;
+            }
+        }
+    }
+
+}
+
+
+
+
+    
+

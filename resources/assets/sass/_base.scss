@@ -1,0 +1,147 @@
+// Include Aria's brand font
+@font-face {
+    font-family: 'Bliss';
+    src: url('../../assets/Bliss/Bliss-Light.eot');
+    src: url('../../assets/Bliss/Bliss-Light.eot?#iefix') format('embedded-opentype'),
+         url('../../assets/Bliss/Bliss-Light.woff2') format('woff2'),
+         url('../../assets/Bliss/Bliss-Light.woff') format('woff'),
+         url('../../assets/Bliss/Bliss-Light.ttf') format('truetype'),
+         url('../../assets/Bliss/Bliss-Light.svg#Bliss-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Bliss';
+    src: url('../../assets/Bliss/Bliss-Regular.eot');
+    src: url('../../assets/Bliss/Bliss-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/Bliss/Bliss-Regular.woff2') format('woff2'),
+        url('../../assets/Bliss/Bliss-Regular.woff') format('woff'),
+        url('../../assets/Bliss/Bliss-Regular.ttf') format('truetype'),
+        url('../../assets/Bliss/Bliss-Regular.svg#Bliss-Regular') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+html {
+    overscroll-behavior-y: contain;
+}
+body {
+    font-family: "Bliss", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    -webkit-overflow-scrolling: touch;
+    touch-action: manipulation;
+    //opacity: 0;
+    @include transition(.2s);
+}
+body.app-ready {
+    opacity: 1;
+}
+section {
+    &._main {
+        padding-top: 50px;
+    }
+    &.content {
+        &:before {
+            background-color: transparent;
+        }
+        &.no-bg {
+            &:before {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.container {
+    max-width: 1320px;
+}
+
+.empty-space {
+    height: 50px;
+}
+
+b, strong {
+    font-weight: 600;
+}
+
+.light {
+    color: var(--font-color);
+}
+
+
+a {
+    color: var(--font-link-color);
+
+    &:active,
+    &:hover,
+    &:focus {
+        color: var(--font-link-color-hover);
+    }
+}
+
+a.inline-link {
+    i {
+        font-size: inherit;
+        padding-top: 3px;
+        float: left;
+        padding-right: 5px;
+    }
+}
+
+.signatureCanvas {
+    background-repeat: no-repeat;
+    background-size: 98%;
+    width: 360px;
+    height: 180px;
+    background-color: #f4f5f7;
+    border-radius: 8px;
+    background-position: center;
+}
+
+
+/**
+ * Login response boxes
+ *
+ */
+
+.box-error {
+    background-color: #dd4250;
+    border-color: #dd4250;
+    color: #fff;
+    border-radius: 3px;
+    margin: 8px 0;
+    padding: 10px;
+    font-size: 15px;
+    display: inline-block;
+    width: 100%;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            padding: 0;
+            float: left;
+        }
+    }
+}
+.box-success {
+    background-color: #44d5ac;
+    border-color: #44d5ac;
+    color: #fff;
+    border-radius: 3px;
+    margin: 8px 0;
+    padding: 10px;
+    font-size: 15px;
+    display: inline-block;
+    width: 100%;
+}
+
+.icon-sm {
+    color: var(--main-color);
+    font-size: 13px;
+}

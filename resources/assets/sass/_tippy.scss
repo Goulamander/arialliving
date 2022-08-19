@@ -1,0 +1,104 @@
+/**
+ *
+ *  Tippy tooltips
+ *
+ */
+
+
+/* node_modules/tippy.js/dist/tippy.css */
+.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}.tippy-iOS{cursor:pointer!important;-webkit-tap-highlight-color:transparent}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}
+
+/* node_modules/tippy.js/dist/svg-arrow.css */
+.tippy-box[data-placement^=top]>.tippy-svg-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-svg-arrow:after,.tippy-box[data-placement^=top]>.tippy-svg-arrow>svg{top:16px;transform:rotate(180deg)}.tippy-box[data-placement^=bottom]>.tippy-svg-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-svg-arrow>svg{bottom:16px}.tippy-box[data-placement^=left]>.tippy-svg-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-svg-arrow:after,.tippy-box[data-placement^=left]>.tippy-svg-arrow>svg{transform:rotate(90deg);top:calc(50% - 3px);left:11px}.tippy-box[data-placement^=right]>.tippy-svg-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-svg-arrow:after,.tippy-box[data-placement^=right]>.tippy-svg-arrow>svg{transform:rotate(-90deg);top:calc(50% - 3px);right:11px}.tippy-svg-arrow{width:16px;height:16px;fill:#333}.tippy-svg-arrow,.tippy-svg-arrow>svg{position:absolute}
+
+/* node_modules/tippy.js/themes/light.css */
+.tippy-box[data-theme~=light]{color:#26323d;box-shadow:0 0 20px 4px rgba(154,161,177,.15),0 4px 80px -8px rgba(36,40,47,.25),0 4px 4px -2px rgba(91,94,105,.15);background-color:#fff}.tippy-box[data-theme~=light][data-placement^=top]>.tippy-arrow:before{border-top-color:#fff}.tippy-box[data-theme~=light][data-placement^=bottom]>.tippy-arrow:before{border-bottom-color:#fff}.tippy-box[data-theme~=light][data-placement^=left]>.tippy-arrow:before{border-left-color:#fff}.tippy-box[data-theme~=light][data-placement^=right]>.tippy-arrow:before{border-right-color:#fff}.tippy-box[data-theme~=light]>.tippy-backdrop{background-color:#fff}.tippy-box[data-theme~=light]>.tippy-svg-arrow{fill:#fff}
+
+/* animation: shift-toward-subtle */
+.tippy-box[data-animation=shift-toward-subtle][data-state=hidden]{opacity:0}.tippy-box[data-animation=shift-toward-subtle][data-state=hidden][data-placement^=top][data-state=hidden]{transform:translateY(-5px)}.tippy-box[data-animation=shift-toward-subtle][data-state=hidden][data-placement^=bottom][data-state=hidden]{transform:translateY(5px)}.tippy-box[data-animation=shift-toward-subtle][data-state=hidden][data-placement^=left][data-state=hidden]{transform:translateX(-5px)}.tippy-box[data-animation=shift-toward-subtle][data-state=hidden][data-placement^=right][data-state=hidden]{transform:translateX(5px)}
+
+
+.tippy-box {
+    border-radius: 8px;
+
+    &.dark-theme {
+        font-weight: 300;
+
+    }
+    .tippy-content {
+        display: inline-block;
+        white-space: normal !important;
+
+        .delete {
+            text-align: left;
+            span {
+                font-size: 13px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color: var(--font-color);
+                display: block;
+            }
+            .btn {
+                float: none;
+                margin: auto !important;
+                width: auto !important;
+            }    
+        }
+
+
+    }
+}
+
+.tippy-box {
+    .edit {
+        min-width: 350px;
+    }
+    .mde-editor .CodeMirror {
+        border: 0 none;
+    }
+    .mde-editor .editor-toolbar {
+        border: 0 none;
+        margin-bottom: 0;
+        height: 80px !important;
+    }
+    .reply .mde-editor .editor-toolbar {
+        height: 43px !important;
+    }
+    .mde-editor .btn {
+        bottom: 3px !important;
+    }
+    .edit .comment-data {
+        bottom: 12px !important;
+    }
+}
+
+.tippy-box[data-theme~=translucent] {
+    background-color: #283240;
+    font-weight: 300;
+    padding: 8px;
+    font-size: 13px;
+}
+
+
+/**
+ * Add new booking tippy
+ *
+ */
+.tippy-box {
+
+	.new-calendar-item {
+        display: inline-block;
+        min-width: 400px;
+        padding: 8px;
+
+		h3 {
+            font-size: 18px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        
+		
+	}
+}
+
+

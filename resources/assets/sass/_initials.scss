@@ -1,0 +1,34 @@
+/* Initial style */
+
+span.initials {
+
+    position: relative;
+    left: 0;
+    width: 40px;
+    height: 39px;
+    background-color: var(--brand-color);
+    border-radius: 100%;
+    line-height: 37px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    top: 0;
+    padding: 0;
+    border: 1px solid #fff;
+    display: block;
+
+    &.auto {
+        font-size: 22px; 
+        background-color:#866df5;
+    }
+
+    &._bg {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: #fff;
+        box-shadow: 2px 2px 14px rgba(0,0,0,.1);
+  
+    }
+}

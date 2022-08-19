@@ -1,0 +1,50 @@
+Id,Status,Mobile,Item Category,Title,User ID,User,Building,Start,End,Is Cleaning,Unit No.,Resident Comments
+55,Active,0427 909 861,Room/Area,1101 Apartment,209,Lauren,TreeHouse By ARIA,03/25/21 09:00 AM,03/25/21 03:00 PM,,,Lauren
+56,Active,0404 431 283,Room/Area,1101 Apartment,208,Howard,TreeHouse By ARIA,03/25/21 05:00 PM,03/25/21 07:30 PM,,,Howard
+57,Active,0413 504 291,Room/Area,1101 Apartment,207,Esma,TreeHouse By ARIA,03/28/21 09:00 AM,03/28/21 02:00 PM,,,Esma
+58,Active,0404 431 283,Room/Area,1101 Apartment,208,Howard,TreeHouse By ARIA,03/29/21 09:00 AM,03/29/21 09:00 PM,,,Howard
+59,Active,0427 909 861,Room/Area,1101 Apartment,209,Lauren,TreeHouse By ARIA,4/01/2021 9:00,4/01/2021 15:00,Cleaning,,Lauren
+60,Active,0427 909 861,Room/Area,1101 Apartment,209,Lauren,TreeHouse By ARIA,4/10/2021 12:00,4/10/2021 21:00,Cleaning,,Lauren
+61,Active,0413 504 291 ,Room/Area,1101 Apartment,208,Trellis Launch - Howard,TreeHouse By ARIA,5/03/2021 9:00,5/03/2021 21:00,,,Trellis Launch - Howard
+62,Active,0413 504 291,Room/Area,1101 Apartment,208,Trellis Launch - Howard,TreeHouse By ARIA,5/04/2021 9:00,5/04/2021 21:00,,,Trellis Launch - Howard
+63,Active,0413 504 291,Room/Area,1101 Apartment,208,Trellis Launch - Howard,TreeHouse By ARIA,5/05/2021 9:00,5/05/2021 12:00,,,Trellis Launch - Howard
+64,Active,0427 909 861,Room/Area,1203 Apartment,209,Lauren,TreeHouse By ARIA,03/25/21 09:00 AM,03/25/21 03:00 PM,,,Lauren
+65,Active,0404 431 283,Room/Area,1203 Apartment,208,Howard,TreeHouse By ARIA,03/25/21 05:00 PM,03/25/21 07:30 PM,,,Howard
+66,Active,0413 504 291 ,Room/Area,1203 Apartment,169,Meg,TreeHouse By ARIA,03/26/21 09:00 AM,03/26/21 09:00 PM,,,Meg
+67,Active,0413 504 291,Room/Area,1203 Apartment,169,Meg,TreeHouse By ARIA,03/27/21 09:00 AM,03/27/21 03:30 PM,Cleaning,,Meg
+68,Active,0413 504 291,Room/Area,1203 Apartment,207,Esma,TreeHouse By ARIA,03/28/21 09:00 AM,03/28/21 02:00 PM,,,Esma
+69,Active,0404 431 283,Room/Area,1203 Apartment,208,Howard,TreeHouse By ARIA,03/29/21 11:00 AM,03/29/21 09:00 PM,,,Howard
+70,Active,0404 431 283,Room/Area,1203 Apartment ,208,Howard,TreeHouse By ARIA,03/30/21 09:00 AM,03/30/21 01:00 PM,Cleaning,,Howard
+71,Active,0427 909 861,Room/Area,1203 Apartment ,209,Lauren,TreeHouse By ARIA,03/31/21 09:00 AM,03/31/21 09:00 PM,Cleaning,,Lauren
+72,Active,0427 909 861,Room/Area,1203 Apartment ,209,Lauren,TreeHouse By ARIA,4/02/2021 9:00,4/02/2021 21:00,,,Lauren
+73,Active,0427 909 861,Room/Area,1203 Apartment ,209,Lauren,TreeHouse By ARIA,4/03/2021 9:00,4/03/2021 21:00,Cleaning,,Lauren
+74,Active,0427 909 861,Room/Area,1203 Apartment ,209,Lauren,TreeHouse By ARIA,4/04/2021 9:00,4/04/2021 21:00,Cleaning,,Lauren
+75,Active,0427 909 861,Room/Area,1203 Apartment ,209,Lauren,TreeHouse By ARIA,4/05/2021 9:00,4/05/2021 15:00,Cleaning,,Lauren
+76,Active,0413 504 291,Room/Area,1203 Apartment ,1,1203 Owner,TreeHouse By ARIA,4/12/2021 9:00,4/12/2021 21:00,,,1203 Owner
+77,Active,0413 504 291,Room/Area,1203 Apartment ,1,1203 Owner,TreeHouse By ARIA,04/13/21 09:00 AM,04/13/21 09:00 PM,,,1203 Owner
+78,Active,0413 504 291,Room/Area,1203 Apartment ,1,1203 Owner,TreeHouse By ARIA,04/14/21 09:00 AM,04/14/21 09:00 PM,Cleaning,,1203 Owner
+79,Active,0413 504 291,Room/Area,1203 Apartment ,1,1203 Owner,TreeHouse By ARIA,04/15/21 09:00 AM,04/15/21 09:00 PM,Cleaning,,1203 Owner
+80,Active,0413 504 291,Room/Area,1203 Apartment ,1,1203 Owner,TreeHouse By ARIA,04/16/21 09:00 AM,04/16/21 09:00 PM,Cleaning,,1203 Owner
+81,Active,0413 504 291,Room/Area,1203 Apartment ,1,1203 Owner,TreeHouse By ARIA,04/17/21 09:00 AM,04/17/21 09:00 PM,Cleaning,,1203 Owner
+82,Active,0413 504 291,Room/Area,1203 Apartment ,1,1203 Owner,TreeHouse By ARIA,04/18/21 09:00 AM,04/18/21 12:00 PM,Cleaning,,1203 Owner
+83,Active,0404 431 283,Room/Area,1203 Apartment ,208,Howard,TreeHouse By ARIA,5/03/2021 9:00,5/03/2021 21:00,Cleaning,,Howard
+84,Active,0404 431 283,Room/Area,1203 Apartment ,208,Howard,TreeHouse By ARIA,5/04/2021 9:00,5/04/2021 21:00,Cleaning,,Howard
+85,Active,0404 431 283,Room/Area,1203 Apartment ,208,Howard,TreeHouse By ARIA,5/05/2021 9:00,5/05/2021 12:00,Cleaning,,Howard
+86,Active,0413 504 291,Room/Area,Dining Room,1,501,TreeHouse By ARIA,03/31/21 04:00 PM,03/31/21 09:00 PM,Cleaning,501,501
+87,Active,0404 431 283,Room/Area,Dining Room,208,Howard,TreeHouse By ARIA,03/29/21 09:00 AM,03/29/21 09:00 PM,,,Howard
+88,Active,0413 504 291,Room/Area,Dining Room,1,602,TreeHouse By ARIA,03/28/21 01:00 PM,03/28/21 05:00 PM,Cleaning,602,602
+89,Active,0413 504 291,Room/Area,Dining Room,1,1108,TreeHouse By ARIA,4/03/2021 15:00,4/03/2021 21:00,Cleaning,1108,1108
+90,Active,0413 504 291,Room/Area,Dining Room,1,703,TreeHouse By ARIA,4/10/2021 9:00,4/10/2021 12:00,Cleaning,703,703
+91,Active,0413 504 291 ,Room/Area,Dining Room,1,404,TreeHouse By ARIA,4/10/2021 15:00,4/10/2021 21:00,Cleaning,404,404
+92,Active,0413 504 291 ,Room/Area,Dining Room,1,1206,TreeHouse By ARIA,4/04/2021 12:00,4/04/2021 21:00,Cleaning,1206,1206
+93,Active,0413 504 291 ,Room/Area,Dining Room,1,602,TreeHouse By ARIA,4/11/2021 9:00,4/11/2021 20:00,Cleaning,602,602
+94,Active,0413 504 291,Room/Area,Dining Room,1,709,TreeHouse By ARIA,04/17/21 12:00 PM,04/17/21 09:00 PM,Cleaning,709,709
+95,Active,0413 504 291,Room/Area,Dining Room,1,1206,TreeHouse By ARIA,04/24/21 06:00 PM,04/24/21 09:00 PM,Cleaning,1206,1206
+96,Active,0413 504 291,Room/Area,Dining Room,1,906,TreeHouse By ARIA,04/26/21 09:30 AM,04/26/21 06:00 PM,Cleaning,906,906
+97,Active,0413 504 291,Room/Area,Dining Room,1,806,TreeHouse By ARIA,5/01/2021 9:00,5/01/2021 21:00,Cleaning,806,806
+98,Active,0413 504 291,Room/Area,Dining Room,208,Trellis Launch - Howard,TreeHouse By ARIA,5/03/2021 9:00,5/03/2021 21:00,,,Trellis Launch - Howard
+99,Active,0413 504 291,Room/Area,Dining Room,208,Trellis Launch - Howard,TreeHouse By ARIA,5/04/2021 9:00,5/04/2021 21:00,Cleaning,,Trellis Launch - Howard
+100,Active,0413 504 291,Room/Area,Dining Room,208,Trellis Launch - Howard,TreeHouse By ARIA,5/05/2021 9:00,5/05/2021 12:00,,,Trellis Launch - Howard
+101,Active,0413 504 291,Room/Area,Dining Room ,177,Yanni Nicolau,TreeHouse By ARIA,05/29/21 09:00 AM,05/29/21 09:00 PM,Cleaning,,Yanni Nicolau
+102,Active,0413 504 291,Room/Area,Dining Room,1,904,TreeHouse By ARIA,6/04/2021 9:00,6/04/2021 21:00,Cleaning,904,904
+103,Active,0413 504 291,Room/Area,Dining Room ,1,1108,TreeHouse By ARIA,6/05/2021 13:00,6/05/2021 21:00,Cleaning,1108,1108

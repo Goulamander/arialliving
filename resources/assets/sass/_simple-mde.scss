@@ -1,0 +1,184 @@
+/* Editor mods */
+
+.mde-editor {
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+
+    flex-flow: column;
+    position: relative;
+
+    .editor-toolbar {
+        order: 2;
+        margin-bottom: 5px;
+        border-radius: 0 0 8px 8px;
+        border-bottom: 2px solid var(--border-color);
+        border-left: 2px solid var(--border-color);
+        border-right: 2px solid var(--border-color);
+        border-top: 0;
+        opacity: 1;
+
+        a {
+            height: 28px;
+            width: 28px;
+            font-size: 14px;
+            margin: 0;
+
+            &:before {
+                line-height: 28px;
+            }
+        }
+        a, i {
+            opacity: .3;
+            @include transition(.2s);
+        }
+
+        &:hover {
+            a, i {
+                opacity: 1;
+            }
+        }
+    }
+
+    .CodeMirror {
+        order: 1;
+        min-height: 100px;
+        border-radius: 8px 8px 0 0;
+        border: 2px solid var(--border-color);
+        background-color: transparent;
+        border-bottom: 0 none;
+        font-family: inherit;
+        padding: 10px;
+        color: var(--input-font-color);
+    }
+    .CodeMirror-scroll {
+        min-height: 130px;
+    }
+    div.CodeMirror-cursors {
+        .CodeMirror-cursor {
+            border-color: var(--input-font-color);
+        }
+    }
+    .btn {
+        order: 3;
+        display: block;
+        position: absolute;
+        bottom: 14px;
+        right: 8px;
+    }
+
+
+    &:focus,
+    &:hover {
+        .CodeMirror,
+        .editor-toolbar {
+            border-color: var(--border-color-focus)
+        }      
+    }
+
+    &.validationError {
+        .CodeMirror,
+        .editor-toolbar {
+            border-color: var(--c-red)
+        }      
+    }
+
+
+
+}
+
+
+
+
+/* Mentions mods */
+.CodeMirror-hints {
+    padding: 0 !important;
+    z-index: 999 !important;
+    border: 0 none !important;
+    box-shadow: 2px 31px 31px 12px rgba(0, 0, 0, 0.15) !important;
+    .CodeMirror-hint {
+        position: relative;
+        &.user-option {
+            padding: 9px 16px;
+            padding-left: 50px;
+
+            .initials,
+            .profile-thumb {
+                left: 12px;
+                top: 5px;
+            }
+            .name {
+                font-size: 13px;
+            
+            }
+        }
+    }
+}
+
+.CodeMirror-wrap,
+.comment--body {
+
+    p {
+        white-space: pre-line;
+    }
+    .mde-mention {
+        white-space: normal;
+        position: relative;
+        padding: 2px 4px;
+        background-color: #00ffff1f;
+        border-radius: 4px;
+        color: #23967b;
+        display: inline-block;
+    }
+}
+.CodeMirror-wrap {
+    .mde-mention {
+        &:before {
+            content: "@";
+        }
+    }
+}
+
+
+
+
+.create-to-list-shortcode {
+    position: relative;
+    padding: 0;
+    display: block;
+
+    ._wrap {
+        width: 100%;
+        display: inline-block;
+        position: relative;
+
+        .rs-container {
+            width: 100%;
+            display: inline-block;
+        }
+
+        input {
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            border-radius: 0;
+            padding: 15px 0;
+            font-size: 17px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.progress__stage_wrap {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 25px;
+    margin-top: -25px;
+    overflow: hidden;
+    position: relative;
+}

@@ -1,0 +1,77 @@
+/*
+ *
+ *  Typography
+ *
+ */
+
+
+p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+}
+a {
+    color: #727e9f;
+}
+a:hover {
+    color: #474e63;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Roboto Condensed",sans-serif;
+    position: relative;
+    line-height: 1.6;
+}
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #000;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+h1::after,
+h2::after {
+    background-color: #ffcd04;
+    bottom: 0;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 60px;
+    z-index: 1;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+i.title {
+    color: #13a089;
+    font-size: 36px;
+    margin-bottom: 12px;
+    display: table;
+}
+h1 img,
+h2 img,
+h3 img,
+h4 img,
+h5 img,
+h6 img {
+    width: 30px;
+    height: auto;
+    margin-right: 5px;
+    margin-top: -3px;
+}
+
+span.g {
+    color: #34986e;
+}

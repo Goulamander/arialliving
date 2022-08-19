@@ -1,0 +1,123 @@
+.authentication {
+
+    .mt-l {
+        margin-top: 60px;
+    }
+
+    h4 {
+        width: 140px;
+        position: absolute;
+        margin-top: 60px;
+    }
+
+    @media (max-width: #{$screen-md-max}) {
+        .content-center {
+            padding-top: 120px !important;
+        }
+    }
+
+    @media (max-width: #{$screen-lg-max}) {
+        h4 {
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-top: -40px;
+        }
+    }
+
+    &:before {
+        background-image: url('/img/aria_bg.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 350px;
+    }
+    &:after {
+        background-color: #000;
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 350px;
+        z-index: 1;
+        opacity: .5;
+    }
+
+    .auth_content {
+        margin-top: 250px;
+
+        h3 {
+            text-transform: unset !important;
+            letter-spacing: unset !important;
+            color: #000;
+            font-size: 36px;
+        }
+        p {
+            letter-spacing: 1px !important;  
+            font-size: 18px;
+            color: var(--font-color);
+        }
+
+        .footer {
+            ul li {
+                letter-spacing: 1px;
+                font-weight: 400;
+                font-size: 13px;
+                a {
+                    color: #000;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .card-plain {
+        box-shadow: 5px 5px 28px rgba(0,0,0, .15);
+        max-width: unset;
+        padding: 50px 15px;
+        max-width: 420px;
+    }
+
+    @media (max-width: #{$screen-lg-max}) {
+        .content_div {
+            order: 2;
+        }
+        .card_div {
+            order: 1;
+        }
+        .auth_content {
+            margin-top: 50px;
+        }
+    }
+
+    .checkbox label {
+        font-size: 15px;
+    }
+
+    .social_link {
+        a {
+            img {
+                height: 23px;
+                width: auto;
+            }
+        }
+    }
+
+}
+
+.acc-setup-header {
+    text-align: left;
+
+    h5 {
+        font-size: 20px;
+        color: var(--font-color);
+    }
+
+    span {
+        color: var(--font-color);
+        font-size: 18px;
+    }
+}
